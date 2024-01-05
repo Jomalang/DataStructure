@@ -1,0 +1,10 @@
+﻿  CLinkedListMain.c
+  my_CLinkedList.c
+  코드를 생성하고 있습니다...
+CLinkedListMain.obj : error LNK2019: _LInsert_main 함수에서 참조되는 확인할 수 없는 외부 기호
+CLinkedListMain.obj : error LNK2019: _LInsertFront_main 함수에서 참조되는 확인할 수 없는 외부 기호
+CLinkedListMain.obj : error LNK2019: _LFirst_main 함수에서 참조되는 확인할 수 없는 외부 기호
+CLinkedListMain.obj : error LNK2019: _LNext_main 함수에서 참조되는 확인할 수 없는 외부 기호
+CLinkedListMain.obj : error LNK2019: _LRemove_main 함수에서 참조되는 확인할 수 없는 외부 기호
+CLinkedListMain.obj : error LNK2019: _LCount_main 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\Hyeonjin\source\repos\data_structure\Debug\CH5_Circlelist.exe : fatal error LNK1120: 6개의 확인할 수 없는 외부 참조입니다.

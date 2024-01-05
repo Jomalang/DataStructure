@@ -1,0 +1,6 @@
+﻿  my_DLinkedList.c
+  Point.c
+  PointListMain.c
+  코드를 생성하고 있습니다...
+C:\Users\Hyeonjin\Desktop\Local_repos\repos\CH4_linklist\my_DLinkedList.c(98): warning C4715: 'LRemove': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  CH4_linklist.vcxproj -> C:\Users\Hyeonjin\Desktop\Local_repos\repos\data_structure\Debug\CH4_linklist.exe
