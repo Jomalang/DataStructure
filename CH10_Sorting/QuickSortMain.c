@@ -1,10 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int Partition(int arr[], int left, int right);
+void Swap(int arr[], int n1, int n2);
+void QuickSort(int arr[], int left, int right);
 
 void main()
 {
+	int myarr[] = { 4,2,6,7,9,0,5,7,2,8,1,2 };
+	QuickSort(myarr, 0, (sizeof(myarr) / sizeof(int))-1); //배열 멤버 개수에서 -1 : 마지막 인덱스 수
 
+	for (int i = 0; i < (sizeof(myarr) / sizeof(int)); i++)
+	{
+		printf("%d", myarr[i]);
+	}
 }
 
 int Partition(int arr[], int left, int right)
