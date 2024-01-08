@@ -1,0 +1,5 @@
+﻿  Interpolation_Search.c
+C:\WorkSpace_DataStructure\CH11_Search1\Interpolation_Search.c(13,2): warning C4013: 'Isearch'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+C:\WorkSpace_DataStructure\CH11_Search1\Interpolation_Search.c(22,12): warning C4244: '초기화 중': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\WorkSpace_DataStructure\CH11_Search1\Interpolation_Search.c(42): warning C4715: 'Isearch': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  CH11_Search1.vcxproj -> C:\WorkSpace_DataStructure\data_structure\Debug\CH11_Search1.exe
