@@ -18,7 +18,7 @@
     <ClCompile Include="Interpolation_Search.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="BinaryTree.c">
+    <ClCompile Include="BinaryTree_2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BinarySearchMain.c">
@@ -29,7 +29,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinaryTree.h">
+    <ClInclude Include="BinaryTree_2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearchTree.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
