@@ -1,4 +1,2 @@
-﻿  BinarySearch.c
-C:\WorkSpace_DataStructure\CH11_Search1\BinarySearch.c(71,9): warning C4013: 'printf'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
-C:\WorkSpace_DataStructure\CH11_Search1\BinarySearch.c(71,2): warning C4047: 'return': 'BTreeNode *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+﻿  BinarySearchMain.c
   CH11_Search1.vcxproj -> C:\WorkSpace_DataStructure\data_structure\Debug\CH11_Search1.exe

@@ -10,14 +10,20 @@ BTreeNode* MakeBTreeNode(void) //노드 생성 및 주소 반환
 	
 	return tmpN;
 }
-BTData GetData(BTreeNode* bt) //데이터 반환
+BTData GetKey(BTreeNode* bt) //데이터 반환
 {
-	return bt->data;
+	return bt->key;
 }
 
-void SetData(BTreeNode* bt, BTData data) //데이터 저장
+char* GetData(BTreeNode* bt)
 {
-	bt->data = data;
+	return bt->name;
+}
+
+void SetData(BTreeNode* bt, BTData key, char* name) //데이터 저장
+{
+	bt->key = key;
+	bt->name = name;
 }
 
 BTreeNode* GetLeftSubTree(BTreeNode* bt) //왼쪽 서브트리 주소 반환
@@ -79,7 +85,7 @@ void InorderTraverse(BTreeNode* bt, VisitFunPtr action)  //중위순회
 		return;
 
 	InorderTraverse(bt->left, action);
-	action(bt->data); //루트 노드 방문
+	action(bt->key); //루트 노드 방문
 	InorderTraverse(bt->right, action);
 }
 
@@ -88,7 +94,7 @@ void PreorderTraverse(BTreeNode* bt, VisitFunPtr action)// 전위순회
 	if (bt == NULL)
 		return;
 
-	action(bt->data); //루트 노드 방문
+	action(bt->key); //루트 노드 방문
 	PreorderTraverse(bt->left, action);
 	PreorderTraverse(bt->right, action);
 }
@@ -99,18 +105,57 @@ void PostorderTraverse(BTreeNode* bt, VisitFunPtr action)// 후위순회
 
 	PostorderTraverse(bt->left, action);
 	PostorderTraverse(bt->right, action);
-	action(bt->data); //루트 노드 방문
+	action(bt->key); //루트 노드 방문
 }
 
-void ShowIntData(int data)
+//for BST
+//왼쪽 자식 노드를 트리에서 제거, 제거된 노드의 주소 반환
+BTreeNode* RemoveLeftSubTree(BTreeNode* bt)
 {
-	printf("%d\n", data);
+	BTreeNode* delNode = NULL;
+	if (bt != NULL)
+	{
+		delNode = GetLeftSubTree(bt);
+		GetLeftSubTree(bt) == NULL;
+	}
+	return delNode;
 }
 
-void ShowNodeData(int data)
+//오른쪽 자식 노드를 트리에서 제거, 제거된 노드의 주소 반환
+BTreeNode* RemoveRightSubTree(BTreeNode* bt)
 {
-	if (0 <= data && data <= 9)
-		printf("%d", data);
+	BTreeNode* delNode = NULL;
+	if (bt != NULL)
+	{
+		delNode = GetRightSubTree(bt);
+		GetRightSubTree(bt) == NULL;
+	}
+	return delNode;
+}
+
+//메모리 소멸없이 main의 왼쪽 자식노드를 두번째 매개변수 노드로 변경
+void ChangeLeftSubTree(BTreeNode* main, BTreeNode* sub)
+{
+	main->left = sub;
+}
+
+//메모리 소멸없이 main의 오른쪽 자식노드를 두번째 매개변수 노드로 변경
+void ChangeRightSubTree(BTreeNode* main, BTreeNode* sub)
+{
+	main->right = sub;
+}
+
+
+
+void ShowIntData(int key)
+{
+	printf("%d\n", key);
+}
+
+void ShowNodeData(int key)
+{
+	if (0 <= key && key <= 9)
+		printf("%d", key);
 	else
-		printf("%c", data);
+		printf("%c", key);
 }
