@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "BinarySearchTree.h"
 
@@ -85,7 +86,7 @@ BSTData* BSTRemove(BTreeNode** pRoot, BSTData target)
 	BTreeNode* cNode = *pRoot; //Current Node
 	BTreeNode* dNode;
 
-	ChangeLeftSubTree(pVRoot, *pRoot);
+	ChangeRightSubTree(pVRoot, *pRoot);
 
 	while (cNode != NULL && GetKey(cNode) != target)
 	{
@@ -176,3 +177,13 @@ BSTData* BSTRemove(BTreeNode** pRoot, BSTData target)
 	return dNode; //삭제 대상 주소 반환
 }
 
+void BSTShowData(BTreeNode** pRoot, int key)
+{
+	BTreeNode* temp = BSTSearch(*pRoot, key);
+	printf("%s\n", GetData(temp));
+}
+
+void BSTShowAll(BTreeNode* bst)
+{
+	BSTInorderTraverse(bst, BSTShowData);
+}

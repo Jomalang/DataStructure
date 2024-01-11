@@ -20,3 +20,10 @@ BTreeNode* BSTSearch(BTreeNode* bst, BSTData target);
 
 // BST를 대상으로 데이터 삭제
 BSTData* BSTRemove(BTreeNode** pRoot, BSTData target);
+
+// 키를 입력하면 데이터 출력
+void BSTShowData(BTreeNode** pRoot, int key);
+
+// 전체 데이터 출력
+void BSTShowAll(BTreeNode* bst);
+

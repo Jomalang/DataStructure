@@ -21,6 +21,8 @@ int main(void)
 	else
 		printf("탐색에 성공한 이름의 값 : %s \n", BSTGetNodeData(sNode));
 
+	BSTShowData(&bstRoot, 1);
+
 	BSTRemove(&bstRoot, 2);
 
 	sNode = BSTSearch(bstRoot, 2);
@@ -30,6 +32,14 @@ int main(void)
 	else
 		printf("탐색에 성공한 이름의 값 : %s \n", BSTGetNodeData(sNode));
 
+	sNode = BSTSearch(bstRoot, 1);
+
+	if (sNode == NULL)
+		printf("Search failed!\n");
+	else
+		printf("탐색에 성공한 이름의 값 : %s \n", BSTGetNodeData(sNode));
+
+	BSTShowAll(bstRoot);
 
 	return 0;
 }

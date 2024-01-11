@@ -89,6 +89,16 @@ void InorderTraverse(BTreeNode* bt, VisitFunPtr action)  //중위순회
 	InorderTraverse(bt->right, action);
 }
 
+void BSTInorderTraverse(BTreeNode* bt, VisitFunPtr action)  //중위순회 for BSTShowAll
+{
+	if (bt == NULL)
+		return;
+
+	BSTInorderTraverse(bt->left, action);
+	action(&bt, bt->key); //루트 노드 방문
+	BSTInorderTraverse(bt->right, action);
+}
+
 void PreorderTraverse(BTreeNode* bt, VisitFunPtr action)// 전위순회
 {
 	if (bt == NULL)
@@ -149,7 +159,7 @@ void ChangeRightSubTree(BTreeNode* main, BTreeNode* sub)
 
 void ShowIntData(int key)
 {
-	printf("%d\n", key);
+	printf("%s\n", key);
 }
 
 void ShowNodeData(int key)

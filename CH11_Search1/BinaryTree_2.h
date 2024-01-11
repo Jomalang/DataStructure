@@ -26,6 +26,7 @@ void MakeLeftSubTree(BTreeNode * main, BTreeNode * sub);
 void MakeRightSubTree(BTreeNode * main, BTreeNode * sub);
 void DeleteTraverse(BTreeNode* main); //모든 노드 삭제
 void InorderTraverse(BTreeNode* bt, VisitFunPtr action); //중위순회
+void BSTInorderTraverse(BTreeNode* bt, VisitFunPtr action);  //중위순회 for BSTShowAll
 void PreorderTraverse(BTreeNode* bt, VisitFunPtr action); // 전위순회
 void PostorderTraverse(BTreeNode* bt, VisitFunPtr action); // 후위순회
 
