@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "AVLReblance.h"
+#include "AVLRebalance.h"
 #include "BinarySearchTree_2.h"
 #include "BinaryTree_3.h"
 
@@ -81,17 +81,17 @@ BTreeNode* Rebalance(BTreeNode** pRoot)
 	if (hDiff > 1) // it need to Rotate LL or LR
 	{
 		if (GetHeightDiff(GetLeftSubTree(*pRoot)) > 0)
-			RotateLL(*pRoot);
+			*pRoot = RotateLL(*pRoot);
 		else
-			RotateLR(*pRoot);
+			*pRoot = RotateLR(*pRoot);
 	}
 	
 	if (hDiff < -1) // it need to Rotate RR or RL
 	{
 		if (GetHeightDiff(GetRightSubTree(*pRoot)) < 0)
-			RotateRR(*pRoot);
+			*pRoot = RotateRR(*pRoot);
 		else
-			RotateRL(*pRoot);
+			*pRoot = RotateRL(*pRoot);
 	}
 
 	return *pRoot;

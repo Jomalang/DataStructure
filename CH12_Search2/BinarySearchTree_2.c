@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "BinarySearchTree.h"
+#include "BinarySearchTree_2.h"
+#include "AVLRebalance.h"
 
 
 // BST의 생성 및 초기화
@@ -21,42 +22,72 @@ char* BSTGetNodeData(BTreeNode* bst)
 	return GetData(bst);
 }
 
-void BSTInsert(BTreeNode** pRoot, BSTData key, char* name)
-{
-	BTreeNode* pNode = NULL; // parent node
-	BTreeNode* cNode = *pRoot; // current node start in Root
-	BTreeNode* nNode = NULL; // new node
+//void BSTInsert(BTreeNode** pRoot, BSTData key, char* name)
+//{
+//	BTreeNode* pNode = NULL; // parent node
+//	BTreeNode* cNode = *pRoot; // current node start in Root
+//	BTreeNode* nNode = NULL; // new node
+//
+//	//새 노드가 추가될 위치 탐색
+//	while (cNode != NULL)
+//	{
+//		if (key == GetKey(cNode))
+//			return; // 데이터(키)의 중복을 허용하지 않는다.
+//
+//		pNode = cNode; //parent노드, cNode가 자식노드 주소로 가기전에 백업
+//
+//		if (GetKey(cNode) > key)
+//			cNode = GetLeftSubTree(cNode);
+//		else
+//			cNode = GetRightSubTree(cNode);
+//	}
+//
+//	//pNode의 자식 노드로 추가할 새 노드의 생성
+//	nNode = MakeBTreeNode(); // 새 노드 생성
+//	SetData(nNode, key, name); // 새 노드에 데이터 저장
+//	
+//
+//	//pNode의 자식 노드로 새 노드를 추가.
+//	if (pNode != NULL)
+//	{
+//		if (key < GetKey(pNode))
+//			MakeLeftSubTree(pNode, nNode);
+//		else
+//			MakeRightSubTree(pNode, nNode); 
+//	}
+//	else //pNode가 NULL이라면 루트가 없는 상황임.
+//	{
+//		*pRoot = nNode;
+//	}
+//
+//	*pRoot = Rebalance(pRoot);
+//
+//}
 
-	//새 노드가 추가될 위치 탐색
-	while (cNode != NULL)
+
+//노드 추가시 추가노드의 부모노드 
+//각각 Rebalance실행할 수 있게 재귀적으로 재구성
+
+void BSTInsert(BTreeNode** pRoot, BSTData key, char* name) 
+{                              
+	if (*pRoot == NULL)
 	{
-		if (key == GetKey(cNode))
-			return; // 데이터(키)의 중복을 허용하지 않는다.
-
-		pNode = cNode; //parent노드, cNode가 자식노드 주소로 가기전에 백업
-
-		if (GetKey(cNode) > key)
-			cNode = GetLeftSubTree(cNode);
-		else
-			cNode = GetRightSubTree(cNode);
+		*pRoot = MakeBTreeNode();
+		SetData(*pRoot, key, name);
 	}
-
-	//pNode의 자식 노드로 추가할 새 노드의 생성
-	nNode = MakeBTreeNode(); // 새 노드 생성
-	SetData(nNode, key, name); // 새 노드에 데이터 저장
-	
-
-	//pNode의 자식 노드로 새 노드를 추가.
-	if (pNode != NULL)
+	else if (key < GetKey(*pRoot))
 	{
-		if (key < GetKey(pNode))
-			MakeLeftSubTree(pNode, nNode);
-		else
-			MakeRightSubTree(pNode, nNode); 
+		BSTInsert(&((*pRoot)->left), key, name);
+		*pRoot = Rebalance(pRoot);
 	}
-	else //pNode가 NULL이라면 루트가 없는 상황임.
+	else if (key > GetKey(*pRoot))
 	{
-		*pRoot = nNode;
+		BSTInsert(&((*pRoot)->right), key, name);
+		*pRoot = Rebalance(pRoot);
+	}
+	else
+	{
+		return NULL; // 키의 중복을 허용하지 않는다.
 	}
 }
 
@@ -174,13 +205,14 @@ BSTData* BSTRemove(BTreeNode** pRoot, BSTData target)
 		*pRoot = GetRightSubTree(pVRoot);
 
 	free(pVRoot);
+	*pRoot = Rebalance(pRoot);
 	return dNode; //삭제 대상 주소 반환
 }
 
 void BSTShowData(BTreeNode** pRoot, int key)
 {
 	BTreeNode* temp = BSTSearch(*pRoot, key);
-	printf("%s\n", GetData(temp));
+	printf("%s(key : %d)\n", GetData(temp), GetKey(temp));
 }
 
 void BSTShowAll(BTreeNode* bst)

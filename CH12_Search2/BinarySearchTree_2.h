@@ -1,5 +1,5 @@
 #pragma once
-#include "BinaryTree_2.h"
+#include "BinaryTree_3.h"
 
 typedef BTData BSTData;
 

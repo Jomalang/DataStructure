@@ -1,0 +1,10 @@
+﻿  AVLRebalance.c
+  AVLRebalanceMain.c
+C:\WorkSpace_DataStructure\CH12_Search2\AVLRebalanceMain.c(10,13): warning C4101: 'crNode' :참조되지 않은 지역 변수입니다.
+C:\WorkSpace_DataStructure\CH12_Search2\AVLRebalanceMain.c(9,13): warning C4101: 'clNode' :참조되지 않은 지역 변수입니다.
+  BinarySearchTree_2.c
+C:\WorkSpace_DataStructure\CH12_Search2\BinarySearchTree_2.c(90,14): warning C4098: 'BSTInsert': 'void' 함수에서 값을 반환하고 있습니다.
+C:\WorkSpace_DataStructure\CH12_Search2\BinarySearchTree_2.c(209,2): warning C4133: 'return': 'BTreeNode *'과(와) 'BSTData *' 사이의 형식이 호환되지 않습니다.
+C:\WorkSpace_DataStructure\CH12_Search2\BinarySearchTree_2.c(220,26): warning C4113: 'void (__cdecl *)(BTreeNode **,int)'은(는) 'VisitFunPtr'과(와) 매개 변수 목록이 다릅니다.
+  코드를 생성하고 있습니다...
+  CH12_Search2.vcxproj -> C:\WorkSpace_DataStructure\data_structure\Debug\CH12_Search2.exe
