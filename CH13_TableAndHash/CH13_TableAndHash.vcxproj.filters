@@ -21,7 +21,13 @@
     <ClCompile Include="SimpleHashMain.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Table.c">
+    <ClCompile Include="DLinkedList_2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Table_2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ChainedTableMain.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,10 +35,13 @@
     <ClInclude Include="Person.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Slot.h">
+    <ClInclude Include="DLinkedList_2.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Table.h">
+    <ClInclude Include="Table_2.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Slot_2.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

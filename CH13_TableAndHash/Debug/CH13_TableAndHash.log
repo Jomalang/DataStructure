@@ -1,4 +1,15 @@
-﻿  Person.c
-  Table.c
+﻿  ChainedTableMain.c
+C:\WorkSpace_DataStructure\CH13_TableAndHash\ChainedTableMain.c(31,5): warning C4047: '=': 'Person *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\WorkSpace_DataStructure\CH13_TableAndHash\ChainedTableMain.c(35,5): warning C4047: '=': 'Person *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\WorkSpace_DataStructure\CH13_TableAndHash\ChainedTableMain.c(39,5): warning C4047: '=': 'Person *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\WorkSpace_DataStructure\CH13_TableAndHash\ChainedTableMain.c(44,5): warning C4047: '=': 'Person *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\WorkSpace_DataStructure\CH13_TableAndHash\ChainedTableMain.c(48,5): warning C4047: '=': 'Person *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\WorkSpace_DataStructure\CH13_TableAndHash\ChainedTableMain.c(52,5): warning C4047: '=': 'Person *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+  Table_2.c
+C:\WorkSpace_DataStructure\CH13_TableAndHash\Table_2.c(22,23): warning C4047: '!=': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\WorkSpace_DataStructure\CH13_TableAndHash\Table_2.c(43,4): warning C4047: 'return': 'int'의 간접 참조 수준이 'Value'과(와) 다릅니다.
+C:\WorkSpace_DataStructure\CH13_TableAndHash\Table_2.c(52,6): warning C4047: 'return': 'int'의 간접 참조 수준이 'Value'과(와) 다릅니다.
+C:\WorkSpace_DataStructure\CH13_TableAndHash\Table_2.c(69,4): warning C4047: 'return': 'int'의 간접 참조 수준이 'Value'과(와) 다릅니다.
+C:\WorkSpace_DataStructure\CH13_TableAndHash\Table_2.c(75,6): warning C4047: 'return': 'int'의 간접 참조 수준이 'Value'과(와) 다릅니다.
   코드를 생성하고 있습니다...
   CH13_TableAndHash.vcxproj -> C:\WorkSpace_DataStructure\data_structure\Debug\CH13_TableAndHash.exe

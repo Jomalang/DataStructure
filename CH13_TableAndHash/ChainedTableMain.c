@@ -5,7 +5,7 @@
 
 int MyHashFunc(int k)
 {
-	return k % 100;    // 키를 부분적으로만 사용한 별로 좋지 않은 해쉬의 예!!!
+	return k % 100;
 }
 
 int main(void)
@@ -17,39 +17,39 @@ int main(void)
 
 	TBLInit(&myTbl, MyHashFunc);
 
-	// 데이터 입력
-	np = MakePersonData(20120003, "Lee", "Seoul");
+	// 데이터 입력 ///////
+	np = MakePersonData(900254, "Lee", "Seoul");
 	TBLInsert(&myTbl, GetSSN(np), np);
 
-	np = MakePersonData(20130012, "KIM", "Jeju");
+	np = MakePersonData(900139, "KIM", "Jeju");
 	TBLInsert(&myTbl, GetSSN(np), np);
 
-	np = MakePersonData(20170049, "HAN", "Kangwon");
+	np = MakePersonData(900827, "HAN", "Kangwon");
 	TBLInsert(&myTbl, GetSSN(np), np);
 
-	// 데이터 검색
-	sp = TBLSearch(&myTbl, 20120003);
+	// 데이터 탐색 ///////
+	sp = TBLSearch(&myTbl, 9100254);
 	if(sp != NULL)
 		ShowPerInfo(sp);
 
-	sp = TBLSearch(&myTbl, 20130012);
+	sp = TBLSearch(&myTbl, 900139);
 	if(sp != NULL)
 		ShowPerInfo(sp);
 
-	sp = TBLSearch(&myTbl, 20170049);
+	sp = TBLSearch(&myTbl, 900827);
 	if(sp != NULL)
 		ShowPerInfo(sp);
 
-	// 데이터 삭제
-	rp = TBLDelete(&myTbl, 20120003);
+	// 데이터 삭제 ///////
+	rp = TBLDelete(&myTbl, 900254);
 	if(rp != NULL)
 		free(rp);
 
-	rp = TBLDelete(&myTbl, 20130012);
+	rp = TBLDelete(&myTbl, 900139);
 	if(rp != NULL)
 		free(rp);
 
-	rp = TBLDelete(&myTbl, 20170049);
+	rp = TBLDelete(&myTbl, 900827);
 	if(rp != NULL)
 		free(rp);
 
