@@ -18,18 +18,24 @@
     <ClCompile Include="DLinkedListGraph.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ALGraphMain.c">
+    <ClCompile Include="ALGraphDFS.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ALGraph.c">
+    <ClCompile Include="my_ArrStackDFS.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DFSMain.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ALGraph.h">
+    <ClInclude Include="DLinkedListGraph.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="DLinkedListGraph.h">
+    <ClInclude Include="ALGraphDFS.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="my_ArrStackDFS.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

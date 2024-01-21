@@ -127,13 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ALGraph.c" />
-    <ClCompile Include="ALGraphMain.c" />
+    <ClCompile Include="ALGraphDFS.c" />
+    <ClCompile Include="DFSMain.c" />
     <ClCompile Include="DLinkedListGraph.c" />
+    <ClCompile Include="my_ArrStackDFS.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ALGraph.h" />
+    <ClInclude Include="ALGraphDFS.h" />
     <ClInclude Include="DLinkedListGraph.h" />
+    <ClInclude Include="my_ArrStackDFS.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
