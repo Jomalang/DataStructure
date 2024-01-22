@@ -27,6 +27,15 @@
     <ClCompile Include="DFSMain.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ALGraphBFS.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="my_CircularQueueBFS.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="BFSMain.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DLinkedListGraph.h">
@@ -36,6 +45,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="my_ArrStackDFS.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ALGraphBFS.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="my_CircularQueueBFS.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

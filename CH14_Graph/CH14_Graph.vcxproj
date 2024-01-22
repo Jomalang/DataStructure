@@ -127,13 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ALGraphDFS.c" />
-    <ClCompile Include="DFSMain.c" />
+    <ClCompile Include="ALGraphBFS.c" />
+    <ClCompile Include="ALGraphDFS.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="BFSMain.c" />
+    <ClCompile Include="my_CircularQueueBFS.c" />
+    <ClCompile Include="DFSMain.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="DLinkedListGraph.c" />
     <ClCompile Include="my_ArrStackDFS.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ALGraphBFS.h" />
     <ClInclude Include="ALGraphDFS.h" />
+    <ClInclude Include="my_CircularQueueBFS.h" />
     <ClInclude Include="DLinkedListGraph.h" />
     <ClInclude Include="my_ArrStackDFS.h" />
   </ItemGroup>
