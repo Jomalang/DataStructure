@@ -18,22 +18,22 @@
     <ClCompile Include="DLinkedListGraph.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ALGraphDFS.c">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="my_ArrStackDFS.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="DFSMain.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ALGraphBFS.c">
+    <ClCompile Include="ALGraphKruskal.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="my_CircularQueueBFS.c">
+    <ClCompile Include="my_SimpleHeapKruskal.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="BFSMain.c">
+    <ClCompile Include="PriorityQueueKruskal.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="KruskalMain.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,16 +41,19 @@
     <ClInclude Include="DLinkedListGraph.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ALGraphDFS.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="my_ArrStackDFS.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="ALGraphBFS.h">
+    <ClInclude Include="ALGraphKruskal.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="my_CircularQueueBFS.h">
+    <ClInclude Include="PriorityQueueKruskal.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="my_SimpleHeapKruskal.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ALEdge.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
