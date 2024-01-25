@@ -6,7 +6,7 @@
 #include "PriorityQueueKruskal.h" // 가중치 구조체를 담을 우선순위 큐
 
 // 정점 이름 상수화 (enum이용)
-enum {A, B, C, D, E, F, G, H ,I, J};
+enum {A, B, C, D, E, F, G, H ,I, J, K, L ,N, M, O, P, Q};
 
 typedef struct _ual
 {
